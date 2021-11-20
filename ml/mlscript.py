@@ -44,12 +44,15 @@ def predict(demo_data_path):
     model.fc = torch.nn.Linear(in_features, num_classes)
 
     model.load_state_dict(torch.load('model!', map_location=torch.device('cpu')))
-    prediction = []
     for img, label in demo_dataset:
         img = torch.Tensor(img)
         img = img.to(device)
         model.eval()
         pred = model(img[None])
-        
-        prediction.append(classes[torch.max(pred, dim=1)[1]])
-    return prediction
+        letter = classes[torch.max(pred, dim=1)[1]]
+        path = 'data.json'
+        with open(path, 'r') as f:
+            data = json.load(f)
+        data["input"] += letter
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=4)        
