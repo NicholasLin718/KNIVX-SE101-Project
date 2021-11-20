@@ -15,12 +15,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 
-<body>
+<body style="background-color:#dacae8;">
     <h1>KNIVX ASL HAND-SIGNALS OUTPUT</h1>
     <p>
-        Translation: <strong id="output" style={fontSize: '20px'}></strong>
+        Translation: 
+        <br>
+        <br>
+        <br>
+        <strong id="output"></strong>
     </p>
-    <button type="button">Click Me!</button>
+    <script>
+    function myFunction() {
+        const textViewCount = document.getElementById('output');
+        fetch('/clear').then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log('GET response:');
+            console.log(data.input); 
+            textViewCount.textContent = data.input;
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+    </script>
+
+    <div class="container">
+        <button class="button-34" role="button" onclick="myFunction()" style = {"text-align: center;"}>CLEAR</button>
+    </div>
+    
+
     <script>
 
         function startLiveUpdate(){
@@ -43,4 +66,44 @@
             startLiveUpdate();
         });
     </script>
+    <style>
+        body {margin-top: 225px;}
+        h1 {text-align: center; color: #160057;}
+        p {text-align: center; color: #160057; font-size: 25px;}
+        div {text-align: center;}
+        button {text-align: center;}
+    </style>
+
+    <style>
+        .container {
+            margin: 0;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .button-34 {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+    </style>
 <body>
