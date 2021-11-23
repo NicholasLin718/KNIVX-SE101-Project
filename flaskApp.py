@@ -1,7 +1,6 @@
 from flask import Flask,redirect,url_for,render_template,request
 from flask.helpers import make_response
 from flask import jsonify
-import readsInput as methods
 import json
 import random
 
@@ -34,7 +33,7 @@ def clear():
         path = 'data.json'
         with open(path, 'r') as f:
             data = json.load(f)
-        data["input"] = ""
+        print(data)
         with open(path, 'w') as f:
             json.dump(data, f, indent=4)
         print(data)
