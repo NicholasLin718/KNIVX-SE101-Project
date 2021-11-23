@@ -1,7 +1,6 @@
 from flask import Flask,redirect,url_for,render_template,request
 from flask.helpers import make_response
 from flask import jsonify
-import readsInput as methods
 import json
 import random
 
@@ -27,7 +26,16 @@ def data():
             json.dump(data, f, indent=4)
         print(data)
         return jsonify(data)
-
-if __name__=="__main__'":
-    app.run(debug=True)
+    
+@app.route('/clear', methods=["POST","GET"])
+def clear():
+    if request.method == 'GET':
+        path = 'data.json'
+        with open(path, 'r') as f:
+            data = json.load(f)
+        print(data)
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=4)
+        print(data)
+        return jsonify(data)
     
