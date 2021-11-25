@@ -11,7 +11,5 @@ def update():
 
 def main():
     value = update()
-    print(value)
-
 if __name__ == "__main__":
     main()
