@@ -10,6 +10,7 @@ def update():
         json.dump(data, f, indent=4)        
 
 def main():
-    value = update()
+    update()
+
 if __name__ == "__main__":
     main()
