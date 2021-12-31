@@ -20,7 +20,7 @@ In practice, as the app is run, the camera is started up, and upon keypresses, i
 
 A potential improvement to the product would be translating hand signals for words rather than letters to improve efficiency and viability. In order to do this, we would have to train the machine learning model to recognize signals paired with movements, thereby allowing the model to translate hand signals for words. Also, the dataset to train the machine learning model did not include a variety of backgrounds, skin tones, and lightings. As aforementioned, it means that the improvements to this product will require a new dataset that includes word signals in different backgrounds and etc.
 
-# Learn More
+# 📖 Learn More
 
  This project was developed by 5 first year Software Engineering students from the University of Waterloo: Kristy Lau, Nicholas Lin, Ivan Hu, Varshaa Maxwell, and Xin Huey Wong. 
  
