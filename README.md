@@ -1,6 +1,6 @@
 # 🤲 Ephphatha - ASL Translator
 
-In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. A recent study shows that on average, a deaf high school senior is likely to read at the level of a nine-year-old. We designed this project as a solution to tackle this challenge: an ASL translator built from a Raspberry Pi that recognizes ASL hand signals in an image and translates the signals into written English.  
+In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. A recent study shows that on average, a deaf high school senior is likely to read at the level of a nine-year-old. We designed this project as a solution to tackle this challenge: an ASL translator built from a Raspberry Pi that recognizes ASL hand signals in an image and translates the signals into written English.
 
 # 💻 How We Built It 
 
@@ -19,3 +19,9 @@ In practice, as the app is run, the camera is started up, and upon keypresses, i
 # ➡️ Future Improvements
 
 A potential improvement to the product would be translating hand signals for words rather than letters to improve efficiency and viability. In order to do this, we would have to train the machine learning model to recognize signals paired with movements, thereby allowing the model to translate hand signals for words. Also, the dataset to train the machine learning model did not include a variety of backgrounds, skin tones, and lightings. As aforementioned, it means that the improvements to this product will require a new dataset that includes word signals in different backgrounds and etc.
+
+# Learn More
+
+ This project was developed by 5 first year Software Engineering students from the University of Waterloo: Kristy Lau, Nicholas Lin, Ivan Hu, Varshaa Maxwell, and Xin Huey Wong. 
+ 
+ [Watch Demo](https://youtu.be/Kypr42PMlr0)
