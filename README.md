@@ -1,4 +1,4 @@
-# 🤲 Ephphatha - ASL Translator  [Watch Demo](https://youtu.be/Kypr42PMlr0)
+# 🤲 Ephphatha - ASL Translator - 🔗[Watch Demo](https://youtu.be/Kypr42PMlr0)
 
 In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. A recent study shows that on average, a deaf high school senior is likely to read at the level of a nine-year-old. We designed this project as a solution to tackle this challenge: an ASL translator built from a Raspberry Pi that recognizes ASL hand signals in an image and translates the signals into written English.
 
